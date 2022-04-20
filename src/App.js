@@ -3,7 +3,6 @@ import React from "react"
 import Header from "./Header"
 import data from "./data"
 import Location from "./Location"
-import {IoLocationSharp} from "react-icons/io5"
 
 export default function App(){
 

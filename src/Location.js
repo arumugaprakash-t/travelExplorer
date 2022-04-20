@@ -9,13 +9,13 @@ export default function Location(props){
 
         <div className="location">
 
-            <img className="location-img" src={props.imageUrl}/>
+            <img className="location-img" src={props.imageUrl} alt="Location Site"/>
            <div className="location-content">
             
                 <div className="location-map">
                     <IoLocationSharp className="location-icon" height="20px"/>
                     <p className="location-name">{props.location}</p>
-                    <a className="location-loc" href={props.googleMapsUrl} target="_blank">View on Google Map</a>
+                    <a className="location-loc" href={props.googleMapsUrl} target="_blank" rel="noreferrer">View on Google Map</a>
                 </div>
                 
                 <div className="location-text">
