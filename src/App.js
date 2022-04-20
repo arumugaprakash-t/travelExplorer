@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from "./Header"
+import data from "./data"
+import Location from "./Location"
+import {IoLocationSharp} from "react-icons/io5"
+
+export default function App(){
+
+    const locations = data.map((item,index)=>{
+        return (
+
+            <Location 
+                key = {index}
+                imageUrl={item.imageUrl} 
+                location = {item.location}
+                googleMapsUrl ={item.googleMapsUrl}
+                title = {item.title}
+                startDate = {item.startDate}
+                endDate = {item.endDate}
+                description = {item.description} />
+
+        )
+    })
+    console.log(locations.length)
+
+    return (
+        <div className="app-header">
+            <Header />
+            {locations}
+        </div>
+    )
 }
-
-export default App;
